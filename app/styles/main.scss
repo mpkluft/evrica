@@ -4,6 +4,7 @@
 @import "partials/variables.scss";
 @import "partials/mixins.scss";
 
+
 //bower:scss
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 // endbower
@@ -41,26 +42,14 @@ h6 {
 }
 
 a {
-  color: $secondTextColor;
-  display: block;
-  &:hover {
-    color: $secondTextColor;
-    text-decoration: none;
-    cursor: pointer;
-  }
-}
-
-ul {
-  margin: 0;
-  padding: 0;
-}
-
-p {
-  margin: 0;
+  font-family: "RobotoBold";
 }
 
 .hidden {
   display: none;
 }
+
+//header begin
+  //nav begin
 
 @import "partials/media.scss";

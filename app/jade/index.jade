@@ -23,12 +23,34 @@ head
     // yandex shara end
   body
     include ./mixins/mixins.jade
+    header.header
+      nav.nav
+        .container
+          .row
+            .col-xs-12
+              ul.nav__ul.sm.sm-blue
+                li.nav__li
+                  a.nav__a Главная
+                li.nav__li
+                  a.nav__a О компании
+                li.nav__li
+                  a.nav__a Услуги и стоимость
+                  ul.nav__ul
+                    li.nav__li
+                      a.nav__a Подменю1
+                    li.nav__li
+                      a.nav__a Подменю2
+                li.nav__li
+                  a.nav__a Сертификаты
+                li.nav__li
+                  a.nav__a Статьи
+                li.nav__li
+                  a.nav__a Контакты
     //
       [if lt IE 10]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
       <![endif]  
-    header.hi 
-      h1.hi2 HI, my name is sasha 
+    
 
     // Google Analytics: change UA-XXXXX-X to be your site's ID.
     script.
@@ -59,6 +81,8 @@ head
     script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js')
     script(src='/bower_components/owlcarousel/owl-carousel/owl.carousel.js')
     script(src='/bower_components/lightbox2/dist/js/lightbox.js')
+    script(src='/bower_components/smartmenus/dist/jquery.smartmenus.js')
+
 
     // endbuild
     // build:js scripts/main.js
