@@ -7,12 +7,13 @@
   <title>Комар Алекс</title>
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <!-- Place favicon.ico in the root directory-->
-  <!-- build:css styles/vendor.css-->
-  <!-- bower:css-->
-  <!-- endbower-->
-  <!-- endbuild-->
   <!-- build:css styles/main.css-->
   <link rel="stylesheet" href="styles/main.css">
+  <!-- endbuild// build:css styles/vendor.css
+  -->
+  <!-- bower:css-->
+  <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.css">
+  <!-- endbower-->
   <!-- endbuild-->
   <!-- build:js scripts/vendor/modernizr.js-->
   <script src="/bower_components/modernizr/modernizr.js"></script>
@@ -28,17 +29,22 @@
       <div class="container">
         <div class="row">
           <div class="col-xs-12">
-            <ul class="nav__ul sm sm-blue">
+            <ul class="nav__ul myMenu">
               <li class="nav__li"><a class="nav__a">Главная</a></li>
               <li class="nav__li"><a class="nav__a">О компании</a></li>
-              <li class="nav__li"><a class="nav__a">Услуги и стоимость</a>
-                <ul class="nav__ul">
-                  <li class="nav__li"><a class="nav__a">Подменю1</a></li>
-                  <li class="nav__li"><a class="nav__a">Подменю2</a></li>
+              <li class="nav__li"><a class="nav__a myMenu-current">Услуги и стоимость<i class="fa fa-sort-desc"></i></a>
+                <ul class="nav__ul sub-ul__nav">
+                  <li class="nav__li sub-li__nav"><a class="nav__a sub-a__nav">Подменю1</a></li>
+                  <li class="nav__li sub-li__nav"><a class="nav__a sub-a__nav">Подменю2</a></li>
                 </ul>
               </li>
               <li class="nav__li"><a class="nav__a">Сертификаты</a></li>
-              <li class="nav__li"><a class="nav__a">Статьи</a></li>
+              <li class="nav__li"><a class="nav__a">Статьи</a>
+                <ul class="nav__ul sub-ul__nav">
+                  <li class="nav__li sub-li__nav"><a class="nav__a sub-a__nav">Подменю1</a></li>
+                  <li class="nav__li sub-li__nav"><a class="nav__a sub-a__nav">Подменю2</a></li>
+                </ul>
+              </li>
               <li class="nav__li"><a class="nav__a">Контакты</a></li>
             </ul>
           </div>
@@ -61,29 +67,17 @@
     e.src='https://www.google-analytics.com/analytics.js';
     r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
     ga('create','UA-XXXXX-X');ga('send','pageview');
+    
   </script>
   <!-- build:js scripts/vendor.js-->
   <!-- bower:js-->
   <script src="/bower_components/jquery/dist/jquery.js"></script>
   <!-- endbower-->
   <!-- endbuild-->
-  <!-- build:js scripts/plugins.js-->
-  <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/affix.js">   </script>
-  <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/alert.js">   </script>
-  <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js">    </script>
-  <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tooltip.js"></script>
+  <!-- build:js scripts/plugins.js     -->
   <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/modal.js"></script>
-  <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/transition.js"></script>
-  <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/button.js"></script>
-  <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/popover.js"></script>
-  <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/carousel.js"></script>
-  <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js"></script>
-  <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js"></script>
-  <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js"></script>
-  <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js"></script>
   <script src="/bower_components/owlcarousel/owl-carousel/owl.carousel.js"></script>
   <script src="/bower_components/lightbox2/dist/js/lightbox.js"></script>
-  <script src="/bower_components/smartmenus/dist/jquery.smartmenus.js"></script>
   <!-- endbuild-->
   <!-- build:js scripts/main.js-->
   <script src="scripts/main.js"></script>

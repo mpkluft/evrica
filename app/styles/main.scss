@@ -7,7 +7,8 @@
 
 //bower:scss
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
-// endbower
+@import "bower_components/font-awesome/scss/font-awesome.scss";
+// endbower 
 
 .browserupgrade {
   margin: 0.2em 0;
@@ -24,7 +25,7 @@ body{
 }
 
 b, strong {
-  font-family: 'RobotoBold', sans-serif;
+  font-family: $mainFont, sans-serif;
   font-weight: normal;
   text-transform: uppercase;
 }
@@ -36,13 +37,13 @@ h4,
 h5,
 h6 {
   margin: 0;
-  font-family: 'RobotoCondensedBold';
+  font-family: $mainFont;
   font-weight: normal;
   text-transform: uppercase;
 }
 
 a {
-  font-family: "RobotoBold";
+  font-family: $mainFont;
 }
 
 .hidden {
@@ -51,5 +52,59 @@ a {
 
 //header begin
   //nav begin
+.nav {
+  background-color: lighten($mainColor, 5%);
+  text-align: center;
+}
+
+.nav__ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+}
+
+.nav__li {
+  display: inline-block;
+  position: relative;
+}
+
+.nav__a {
+  font-family: $mainFont;
+  color: #ffffff;
+  font-size: 12px;
+  padding: 23px 20px;
+  display: block;
+  cursor: pointer;
+  
+  &:hover {
+    color: $accentColor;
+    background-color: $mainColor;
+  }
+  .fa {
+    position: relative;
+    &:before {
+      font-size: 6px;
+      position: absolute;
+      top: -8px;
+      left: 2px;
+    }
+  }
+}
+.sub-ul__nav {
+  position: absolute;
+  top: 65px;
+  left: 0;
+  background-color: $mainColor;
+}
+.sub-a__nav {
+  padding: 7px 10px;
+}
+
+.myMenu-current {
+  color: $accentColor;
+  background-color: $mainColor;
+}
+
 
 @import "partials/media.scss";

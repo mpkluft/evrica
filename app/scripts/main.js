@@ -11,7 +11,7 @@ $(function(){
 	  singleItem: true,
 	});
 
-  $('.nav__ul').smartmenus();
+  console.log($('.myMenu'));
 
 })
 
