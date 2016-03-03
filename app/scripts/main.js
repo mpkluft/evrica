@@ -15,37 +15,37 @@ $(".burger").click(function(){
 	$(this).toggleClass("is-active");
 });
 
-$(".sub-ul__nav").css("display", "none");
+function menu(menuClass, curElWithoutDot){
+	
+	var ul = $(menuClass).find("ul").eq(0),
+			ulClass =ul.attr("class"),
+			li = $(ul).find("li").eq(0),
+			liClass =li.attr("class"),
+			a = li.find("a").eq(0),
+			aClass = a.attr("class"),
+			curElement = curElWithoutDot;
 
-var allLi = $(".li__nav"),
-		ulNav = $(".ul__nav"),
-		allA  = $(".a__nav"),
-		allSubA = $(".sub-a__nav");
+	$("." + aClass).eq(0).addClass(curElWithoutDot);
+	$("." + liClass)
+		.has("." + ulClass)
+		.find("." + aClass).eq(0)
+		.append("<i class = 'fa fa-sort-desc'></i>");
+	$("."+ulClass+" "+"."+ulClass+" "+"."+aClass).removeClass(aClass).addClass("sub");
 
-allLi
-	.has(".ul__nav")
-	.find(".a__nav")
-	.append("<i class = 'fa fa-sort-desc'></i>");
+	$("." + aClass).click(function(){
+		$("."+curElWithoutDot).removeClass(curElWithoutDot);
+		$(this).addClass(curElWithoutDot);
+	});
 
-allA.eq(0).addClass("myMenu-current");
+	$(".sub").click(function(){
+		$("."+curElWithoutDot).removeClass(curElWithoutDot);
+		$(this).parent().parent().parent().find("." + aClass).addClass(curElWithoutDot);
+	});
+}
 
-allA.hover(
-	function(){
-		$(this).parent().find(".sub-ul__nav").css("display", "block");
-	},
-	function(){
-		$(this).parent().find(".sub-ul__nav").delay(1000).css("display", "none");
-	}
-);
+menu(".nav", "a__nav_current");
 
-allSubA.hover(
-	function(){
-		$(this).parent().parent().css("display", "block");
-	},
-	function(){
-		$(this).parent().parent().delay(2000).css("display", "none");
-	}
-);
+
 
 
 

@@ -66,8 +66,27 @@ a {
 .li__nav {
   display: inline-block;
   position: relative;
+  &:hover {
+    .ul__nav {
+      display: block;
+    }
+  }
+  .ul__nav {
+    position: absolute;
+    left: 0;
+    background-color: lighten($mainColor, 5%);
+    width: 100%;
+    display: none;
+    .li__nav{
+      display: block;
+      .sub,
+      .a__nav {
+        padding: 7px 10px;
+      }
+    }
+  }
 }
-
+.sub,
 .a__nav {
   font-family: $mainFont;
   color: $secondTextColor;
@@ -90,41 +109,13 @@ a {
     }
   }
 }
-.sub-ul__nav {
-  position: absolute;
-  top: 65px;
-  left: 0;
-  background-color: $mainColor;
-  //display: none;
-}
-.sub-a__nav {
-  font-family: $mainFont;
-  color: $secondTextColor;
-  font-size: 12px;
-  padding: 7px 10px;
-  display: block;
-  cursor: pointer;
-  
-  &:hover {
-    color: $accentColor;
-    background-color: $mainColor;
-  }
-  .fa {
-    position: relative;
-    &:before {
-      font-size: 10px;
-      position: absolute;
-      top: -10px;
-      left: 4px;
-    }
-  }
-}
 
-.myMenu-current {
+
+.a__nav_current {
   color: $accentColor;
   background-color: $mainColor;
 }
-
+// nav end
 
 //burger-sass
 .icon__burger {
