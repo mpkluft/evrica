@@ -60,9 +60,6 @@ a {
 }
 
 .ul__nav {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
   display: inline-block;
 }
 
@@ -73,7 +70,7 @@ a {
 
 .a__nav {
   font-family: $mainFont;
-  color: #ffffff;
+  color: $secondTextColor;
   font-size: 12px;
   padding: 23px 20px;
   display: block;
@@ -86,10 +83,10 @@ a {
   .fa {
     position: relative;
     &:before {
-      font-size: 6px;
+      font-size: 10px;
       position: absolute;
-      top: -8px;
-      left: 2px;
+      top: -10px;
+      left: 4px;
     }
   }
 }
@@ -98,9 +95,29 @@ a {
   top: 65px;
   left: 0;
   background-color: $mainColor;
+  //display: none;
 }
 .sub-a__nav {
+  font-family: $mainFont;
+  color: $secondTextColor;
+  font-size: 12px;
   padding: 7px 10px;
+  display: block;
+  cursor: pointer;
+  
+  &:hover {
+    color: $accentColor;
+    background-color: $mainColor;
+  }
+  .fa {
+    position: relative;
+    &:before {
+      font-size: 10px;
+      position: absolute;
+      top: -10px;
+      left: 4px;
+    }
+  }
 }
 
 .myMenu-current {
