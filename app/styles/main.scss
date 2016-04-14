@@ -19,126 +19,51 @@
   padding: 0.2em 0;
 }
 
-body{
-  margin: 0;
-  font-family: $mainFont;
-  min-width: 320px;
-  line-height: 1.6;
-}
-
-b, strong {
-  font-family: $mainFont, sans-serif;
-  font-weight: normal;
-  text-transform: uppercase;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
-  font-family: $mainFont;
-  font-weight: normal;
-  text-transform: uppercase;
-}
-
-a {
-  font-family: $mainFont;
-}
-
-.hidden {
-  display: none;
-}
-
-//header begin
-  //nav begin
-.nav {
-  background-color: lighten($mainColor, 5%);
+.form {
+  width: 330px;
+  margin: 0 auto;
+  border: 1px solid black;
+  padding: 15px 5px;
   text-align: center;
 }
 
-.ul__nav {
-  display: inline-block;
+.h3__form{
+  margin: 0;
+  padding-bottom: 15px;
 }
 
-.li__nav {
-  display: inline-block;
-  position: relative;
-  &:hover {
-    .ul__nav {
-      display: block;
-    }
-  }
-  .ul__nav {
-    position: absolute;
-    left: 0;
-    background-color: lighten($mainColor, 5%);
-    width: 100%;
-    display: none;
-    .li__nav{
-      display: block;
-      .sub,
-      .a__nav {
-        padding: 7px 10px;
-      }
-    }
-  }
+input {
+  width: 300px;
+  height: 30px;
+  margin-bottom: 15px;
+  font-size: 18px;
+  padding: 0 10px;
+  border: 0;
+  background-color: #EFEFEF;
 }
-.sub,
-.a__nav {
-  font-family: $mainFont;
-  color: $secondTextColor;
-  font-size: 12px;
-  padding: 23px 20px;
+
+.button__form {
+  width: 150px;
+  height: 30px;
+}
+
+.error-message__form{
   display: block;
-  cursor: pointer;
-  
-  &:hover {
-    color: $accentColor;
-    background-color: $mainColor;
-  }
-  .fa {
-    position: relative;
-    &:before {
-      font-size: 10px;
-      position: absolute;
-      top: -10px;
-      left: 4px;
-    }
-  }
+  text-align: center;
+  padding: 5px;
+  margin: 15px 0 0;
+  background-color: red;
+  color: white;
 }
 
+input.passed__form {
+  border: 2px solid green;
+  font-size: 20px;
+}
 
-.a__nav_current {
-  color: $accentColor;
-  background-color: $mainColor;
+input.not-passed__form {
+  border: 2px solid red;
+  font-size: 13px;
 }
-// nav end
-
-//burger-sass
-.icon__burger {
-  @include burger(25px, 2px, 5px, #fff);
-  position: absolute;
-  top: 10px;
-  left: 8px;
-}
-.is-active .icon__burger {
-  @include burger-to-cross;
-}
-.burger {
-    background-color: $mainColor;
-    cursor: pointer;
-    display: block;
-    height: 20px;
-    margin: 0 auto;
-    padding: 18px 20px;
-    position: relative;
-    width: 20px;
-    float: right;
-    margin-top: 15px;
-}
-// burger-sass end
 
 @import "partials/media.scss";
