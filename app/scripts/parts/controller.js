@@ -1,36 +1,9 @@
 
-
-var regExpData;
 /*
-regExpData = (function(){
-  function regExpData(){}
-  regExpData.prototype.email = /^[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4}$/;
-  regExpData.prototype.fio = /^[а-яА-ЯёЁa-zA-Z]+$/;
-  regExpData.prototype.phone = /^[0-9-]{3,20}$/;
-  regExpData.prototype.authorization = /^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$/;
-  regExpData.prototype.yearOfBirth = /^(19\d\d$|20[0-1][0-6]$)/;
-  return regExpData;
-})();
 
-//создаем  объект со свойствами, названия которых соответствуют названиям в форме
-var newRegExp = new regExpData;
 
-newRegExp.firstName = newRegExp.fio;
-newRegExp.patronymicName = newRegExp.fio;
-newRegExp.lastName = newRegExp.fio;
-newRegExp.yearOfBirth = newRegExp.yearOfBirth;
-newRegExp.telephone = newRegExp.phone;
-newRegExp.email = newRegExp.email;
-newRegExp.login = newRegExp.email;
-newRegExp.password = newRegExp.email;
-
-console.log(newRegExp);
 
 */
-
-
-
-
 
 function animal(name) {
   this.name = name;
@@ -39,26 +12,9 @@ function animal(name) {
   };
 }
 
-var form = document.forms.myForm;
 
-function formData(form){
 
-  var el = form.elements;
 
-  for(var cur in form.elements){
-    if(el[cur].nodeType === 1 && el[cur].tagName === 'INPUT'){
-
-      this[''+ el[cur].getAttribute('name') +''] = el[cur];
-
-    }
-
-    
-    //this[''+ form.elements[cur].getAttribute('name') +''] = form[cur];
-  }
-
-}
-var newFormData = new formData(form);
-console.log(newFormData);
 
 
 
@@ -91,7 +47,7 @@ function getFormData(curForm) {
 
 */
 window.onload = function() {
-
+/*
   var currentForm = document.getElementsByTagName("form")[0];
 
   addEvent(currentForm, "submit", function(e){
@@ -124,15 +80,46 @@ window.onload = function() {
                                     } 
                                   }              
   });
-  
+  */
+
+var currentForm2 = document.getElementsByTagName("form")[0];
+
+  addEvent(currentForm2, "submit", function(e){
+
+    //получаем данные из формы
+    var newFormData = new formData(this);
+
+    //создаем  объект со свойствами, названия которых соответствуют названиям в форме
+    var newRegExp = new regExpData;
+
+    newRegExp.firstName = newRegExp.fio;
+    newRegExp.patronymicName = newRegExp.fio;
+    newRegExp.lastName = newRegExp.fio;
+    newRegExp.yearOfBirth = newRegExp.yearOfBirth;
+    newRegExp.telephone = newRegExp.phone;
+    newRegExp.email = newRegExp.email;
+    newRegExp.login = newRegExp.email;
+    newRegExp.password = newRegExp.email;
+
+    var newErrorMessage = new errorMessage;
+
+    errorMessage.prototype.firstName = 'Имя (ошибка) пример Иван';
+    errorMessage.prototype.patronymicName = 'Отчество (ошибка) пример Иванович';
+    errorMessage.prototype.lastName = 'Фамилия (ошибка) пример Иванов';
+    errorMessage.prototype.yearOfBirth = 'год рождения (ошибка) пример c 1900 по 2016';
+    errorMessage.prototype.telephone = 'телефон (ошибка) пример 985-234-23-23';
+    errorMessage.prototype.email = 'email (ошибка) пример mpkluft@yandex.ru';
+    errorMessage.prototype.login = 'логин (ошибка) пример mpkluft';
+    errorMessage.prototype.password = 'пароль (ошибка) пример qwerty123';
+
+    console.log(newErrorMessage);
+
+    e.preventDefault();
+    return false;
+  });
+
+
+
 }
 
-  function pow(x, n) {
-    var result = 1;
-
-    for (var i = 0; i < n; i++) {
-      result *= x;
-    }
-
-    return result;
-  }
+ 

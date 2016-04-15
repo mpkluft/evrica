@@ -162,3 +162,43 @@ function addEvent( elem, type, handler ){
 
     return result;
   }
+
+
+
+////////////////////////////////////////////////////
+
+function formData(form){
+
+  var el = form.elements;
+
+  for(var cur in el){
+    if(el[cur].nodeType === 1 && el[cur].tagName === 'INPUT'){
+      this[''+ el[cur].getAttribute('name') +''] = el[cur].value;
+    }
+  }
+}
+
+
+var regExpData = (function(){
+  function regExpData(){}
+  regExpData.prototype.email = /^[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4}$/;
+  regExpData.prototype.fio = /^[а-яА-ЯёЁa-zA-Z]+$/;
+  regExpData.prototype.phone = /^[0-9-]{3,20}$/;
+  regExpData.prototype.authorization = /^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$/;
+  regExpData.prototype.yearOfBirth = /^(19\d\d$|20[0-1][0-6]$)/;
+  return regExpData;
+})();
+
+var errorMessage = (function(){
+  function errorMessage(){}
+  errorMessage.prototype.firstName = 'Имя (ошибка) пример Иван';
+  errorMessage.prototype.patronymicName = 'Отчество (ошибка) пример Иванович';
+  errorMessage.prototype.lastName = 'Фамилия (ошибка) пример Иванов';
+  errorMessage.prototype.yearOfBirth = 'год рождения (ошибка) пример c 1900 по 2016';
+  errorMessage.prototype.telephone = 'телефон (ошибка) пример 985-234-23-23';
+  errorMessage.prototype.email = 'email (ошибка) пример mpkluft@yandex.ru';
+  errorMessage.prototype.login = 'логин (ошибка) пример mpkluft';
+  errorMessage.prototype.password = 'пароль (ошибка) пример qwerty123';
+  return errorMessage;
+})();
+
