@@ -25,29 +25,35 @@ head
     // yandex shara end
   body
     include ./mixins/mixins.jade
+    heder.heder
+      .container
+        .heder__top-line.row
+          .col-sm-8
+            nav.top-nav 
+              ul.top-nav__ul
+                li.top-nav__li 
+                  a.top-nav__a О компании
+                li.top-nav__li 
+                  a.top-nav__a Как заказать
+                li.top-nav__li 
+                  a.top-nav__a Доставка
+                li.top-nav__li 
+                  a.top-nav__a Сотрудничество
+                li.top-nav__li 
+                  a.top-nav__a Клиенты
+                li.top-nav__li 
+                  a.top-nav__a Вакансии
+                li.top-nav__li 
+                  a.top-nav__a Контакты
+          .col-sm-4 
+            nav.authorization
+              ul.autorization__ul
+                li.autorization__li
+                  img.authorization__img(src="images/icon/autorize.png", alt="")
+          
+
+    button.button Подробнее
     
-    form.form(action="index.html", method="get", name="myForm1")
-      h3.h3__form Форма регистрации клиента
-      div
-        input(type="text", name="firstName", placeholder="имя")
-      div
-        input(type="text", name="patronymicName", placeholder="отчество")
-      div
-        input(type="text", name="lastName", placeholder="фамилия")
-      div
-        input(type="text", name="yearOfBirth", placeholder="год рождения")
-      div
-        input(type="text", name="telephone", placeholder="телефон")
-      div
-        input(type="text", name="email", placeholder="email")
-      div
-        input(type="text", name="login", placeholder="логин")
-      div
-        input(type="text", name="password", placeholder="пароль")
-      button.button__form Отправить
-
-
-
     //
       [if lt IE 10]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
