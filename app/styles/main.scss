@@ -23,6 +23,57 @@
 	@include button;
 }
 
+//Header
+.header {
+	background-color: #59595b;
+}
+.heder__top-line {
+	padding: 10px 0;
+}
+// top-nav begin
+.top-nav__li {
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 36px;
+	font-size: em(12px);
+	font-family: $regular;
+	text-transform: uppercase;
+}
+.top-nav__a {
+	color: #fff;
+	&:hover {
+		cursor: pointer;
+		color: #c0c0c2;
+		text-decoration: none;
+	}
+}
+// top-nav end
+.authorization {
+	text-align: right;
+}
+.autorization__ul {
+	display: inline-block;
+}
+.autorization__li {
+	display: inline-block;
+	vertical-align: middle;
+	font-size: em(12px);
+	font-family: $regular;
+	text-transform: uppercase;
+	margin-left: 5px;
+}
+.autorization__a {
+	color: #fff;
+	&:hover {
+		cursor: pointer;
+		color: #c0c0c2;
+		text-decoration: none;
+	}
+}
+.authorization__img {
+	padding-right: 6px;
+}
+//authorization begin
 
 
 @import "partials/media.scss";
