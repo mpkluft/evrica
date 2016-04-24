@@ -26,36 +26,86 @@ head
   body
     include ./mixins/mixins.jade
     header.header
-      .container
-        .heder__top-line.row
-          .col-sm-9
-            nav.top-nav 
-              ul.top-nav__ul
-                li.top-nav__li 
-                  a.top-nav__a О компании
-                li.top-nav__li 
-                  a.top-nav__a Как заказать
-                li.top-nav__li 
-                  a.top-nav__a Доставка
-                li.top-nav__li 
-                  a.top-nav__a Сотрудничество
-                li.top-nav__li 
-                  a.top-nav__a Клиенты
-                li.top-nav__li 
-                  a.top-nav__a Вакансии
-                li.top-nav__li 
-                  a.top-nav__a Контакты
-          .col-sm-3 
-            nav.authorization
-              ul.autorization__ul
-                li.autorization__li
-                  img.authorization__img(src="images/icon/autorize.png", alt="")
-                li.autorization__li
-                  a.autorization__a Войти
-                li.autorization__li
-                  span.autorization__span Или
-                li.autorization__li
-                  a.autorization__a Зарегистрироваться
+      .heder__top-line
+        .container
+          .row
+            .col-xs-8
+              nav.top-nav 
+                ul.top-nav__ul
+                  li.top-nav__li 
+                    a.top-nav__a О компании
+                  li.top-nav__li 
+                    a.top-nav__a Как заказать
+                  li.top-nav__li 
+                    a.top-nav__a Доставка
+                  li.top-nav__li 
+                    a.top-nav__a Сотрудничество
+                  li.top-nav__li 
+                    a.top-nav__a Клиенты
+                  li.top-nav__li 
+                    a.top-nav__a Вакансии
+                  li.top-nav__li 
+                    a.top-nav__a Контакты
+                div.burger
+                  div.icon__burger
+            .col-xs-4.norelative
+              nav.authorization
+                ul.autorization__ul
+                  li.autorization__li.autorization__li_img 
+                    img.authorization__img(src="images/icon/autorize.png", alt="")
+                  li.autorization__li
+                    a.autorization__a Войти
+                  li.autorization__li
+                    span.autorization__span Или
+                  li.autorization__li
+                    a.autorization__a Зарегистрироваться
+                img.authorization__button(src="images/icon/autorize.png", alt="")
+      .header__contacts
+        .container
+          .row
+            .col-md-2.col-sm-3.col-xs-5
+              img.logo(src="images/icon/logo.png", alt="Lanmark")
+            .col-md-5.col-sm-6
+              .phone
+                img.phone__img(src="images/icon/phone.png", alt="")
+                span.phone__name Многоканальный телефон
+                span.phone__number (495) 721-14-70
+                a.phone__callme Обратная связь
+              .email
+                img.email__img(src="images/icon/letter.png", alt="")
+                span.email__name Отдел продаж
+                span.email__email info@lanmark.ru
+            .col-md-3
+              .search
+                img.search__img(src="images/icon/lupa.png", alt="")
+                span.search__input Поиск
+            .col-md-2.col-sm-3.col-xs-7
+              .basket
+                img.basket__img(src="images/icon/basket.png", alt="")
+                .circle 3
+                span.basket__name Ваша корзина
+                span.basket__price 136 700 Р.
+      .header__main-menu
+        .container
+          .row
+            .col-xs-12
+              nav.main-menu
+                ul.main-menu__ul
+                  li.main-menu__li
+                    a.main-menu__a Телефония
+                  li.main-menu__li
+                    a.main-menu__a Измерительные приборы
+                  li.main-menu__li
+                    a.main-menu__a Сетевое оборудование
+                  li.main-menu__li
+                    a.main-menu__a Периферия
+                  li.main-menu__li
+                    a.main-menu__a Безопасность
+                  li.main-menu__li
+                    a.main-menu__a Маршрутизаторы CISCO
+
+
+
           
 
     button.button Подробнее

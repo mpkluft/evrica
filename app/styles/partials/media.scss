@@ -3,16 +3,117 @@
 /*==========  Desktop First Method  ==========*/
 
 /* Large Devices, Wide Screens */
-@media only screen and (max-width: 1200px){}
+@media only screen and (max-width: 1230px){
+  .top-nav__li {
+    margin-right: 15px;
+  }
+  .main-menu__li {
+    margin-right: 2.5%;
+  }
+  .main-menu__a {
+    font-size: em(16px);
+  }
+}
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px) {
+  .top-nav__ul,
+  .autorization__ul {
+    display: none;
+  }
+  .authorization__button,
+  .burger {
+    display: inline-block;
+  }
+  .top-nav__ul {
+    position: absolute;
+    top: 23px;
+    left: 0;
+    width: 165px;
+    height: 156px;
+    background-color: #59595b;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  }
+  .top-nav__li {
+    display: block;
+    margin: 5px 0;
+    font-size: em(17px);
+    font-family: $regular;
+    text-transform: uppercase;
+  }
+  .autorization__ul {
+    position: absolute;
+    top: 33px;
+    right: 0px;
+    width: 195px;
+    height: 70px;
+    background-color: #59595b;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  }
+  .autorization__li {
+    display: block;
+    margin: 5px 0;
+    font-size: em(17px);
+    font-family: $regular;
+    text-transform: uppercase;
+  }
+  .autorization__li_img {
+    display: none;
+  }
+  .email,
+  .search {
+    display: none;
+  }
+  .phone {
+    width: 100%;
+  }
+  .logo {
+    padding-left: 15px;
+  }
+  .main-menu__ul {
+    padding: 13px 0 16px 0;
+  }
+  .main-menu__li {
+    margin-right: 1%;
+  }
+  .main-menu__a {
+    font-size: em(14px);
+  }
 
 }
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px) {
+ .phone {
+    display: none;
+  }
+  .logo {
+    width: 100px;
+  }
+  .basket {
+    padding: 20px 0 0 62px;
+  }
+  .basket__img {
+    top: 13px;
+  }
+  .circle {
+      top: 15px;
+  }
+  .main-menu__ul {
+    padding: 10px 0 10px 0;
+  }
+  .main-menu__li {
+    display: block;
+  }
+  .main-menu__a {
+    font-size: em(24px);
+  }
 
 }
+
+
+
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
 

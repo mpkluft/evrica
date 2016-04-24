@@ -3,6 +3,8 @@
 @import "bower_components/font-awesome/scss/font-awesome.scss";
 @import "bower_components/reset.scss/reset.scss";
 @import "bower_components/sass-burger/_burger.scss";
+@import "bower_components/animate.css/animate.min";
+@import "bower_components/owlcarousel/owl-carousel/owl.carousel";
 // endbower 
 
 // mixin
@@ -19,17 +21,27 @@
   padding: 0.2em 0;
 }
 
+body {
+	min-width: 320px;
+}
 .button {
 	@include button;
+}
+.norelative {
+	position: static;
 }
 
 //Header
 .header {
-	background-color: #59595b;
+
 }
 .heder__top-line {
+	background-color: #59595b;
+	position: relative;
 	padding: 10px 0;
+  z-index: 10;
 }
+
 // top-nav begin
 .top-nav__li {
 	display: inline-block;
@@ -47,7 +59,29 @@
 		text-decoration: none;
 	}
 }
+	//burger-sass
+.icon__burger {
+  @include burger(20px, 2px, 4px, #fff);
+  position: absolute;
+
+}
+.is-active .icon__burger {
+  @include burger-to-cross;
+}
+.burger {
+  display: inline-block;
+  background-color: #59595b;
+  cursor: pointer;
+  position: relative;
+  vertical-align: top;
+  width: 17px;
+  height: 17px;
+  display: none;
+}
+	// burger-sass end
 // top-nav end
+
+//authorization begin
 .authorization {
 	text-align: right;
 }
@@ -76,7 +110,150 @@
 .autorization__span {
 	color: #909092;
 }
-//authorization begin
+.authorization__button {
+	cursor: pointer;
+	 display: none;
+}
+// .header__contacts begin
+.header__contacts{
+	font-family: $regular;
+	span {
+		display: block;
+    margin-bottom: 8px;
+	}
+}
+.logo {
+	padding: 15px 0;
+}
+  // phone begin
+.phone {
+  width: 49%;
+  display: inline-block;
+  vertical-align: top;
+  padding: 40px 0 0 46px;
+  position: relative;
+}
+.phone__img {
+  position: absolute;
+  left: 0;
+  top: 30px;
+}
+.phone__name {
+	color: $grey;
+	font-size: em(15px);
+}
+.phone__number {
+  color: $black;
+  font-size: em(20px);
+}
+.phone__callme {
+  color: $blue;
+  border-bottom: 1px solid $blue;
+  cursor: pointer;
+  &:hover {
+    text-decoration: none;
+    color: $blue;
+  }
+}
+  // phone end
+  // .email begin
+.email {
+  width: 49%;
+  display: inline-block;
+  padding: 40px 0 0 50px;
+  position: relative;
+}
+.email__img {
+  position: absolute;
+  left: 0;
+  top: 30px;
+}
+.email__name{
+  color: $grey;
+  font-size: em(15px);
+}
+.email__email {
+  color: $black;
+  font-size: em(20px);
+}
 
+  // .email end
+  // .search begin
+.search {
+  position: relative;
+  padding: 50px 0 0 28px;
+}
+
+.search__input {
+  text-transform: uppercase;
+  color: #c0c0c0;
+  font-size: em(15px);
+}
+.search__img {
+  position: absolute;
+  left: 0;
+  top: 48px;
+}
+  // .search end
+  // .basket begin
+.basket {
+  position: relative;
+  padding: 40px 0 0 62px;
+}
+.basket__name {
+  color: $grey;
+  font-size: em(15px);
+}
+.basket__price {
+  color: $black;
+  font-size: em(20px);
+}
+.basket__img {
+  position: absolute;
+  left: 0;
+  top: 26px;
+}
+.circle {
+  position: absolute;
+  left: 35px;
+  top: 25px;
+  background-color: #8ab84f;
+  width: 20px;
+  height: 20px;
+  color: #fff;
+  @include border-top-radius(50%);
+  @include border-right-radius(50%);
+  @include border-bottom-radius(50%);
+  padding: 5px 0 0 7px;
+  font-size: em(12px);
+}
+
+  // .basket end
+// .header__contacts end
+
+//.header__main-menu begin
+.main-menu__ul {
+  text-align: center;
+  padding: 23px 0 26px 0;
+  display: block;
+  background-color: #7bac42;
+}
+.main-menu__li {
+  display: inline-block;
+  margin-right: 3.5%;
+  font-family: $regular;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+.main-menu__a {
+  font-size: em(20px);
+  color: #fff;
+  &:hover {
+    cursor: pointer;
+    color: #fff;
+  }
+}
+//.header__main-menu end
 
 @import "partials/media.scss";
