@@ -256,14 +256,23 @@ body {
 }
 //.header__main-menu end
 //.header__slider begin
+.slider-wrap {
+	margin-top: 15px;
+}
+
 .slider__item {
-  padding-top: 60px;
+	padding: 50px 0;
+	background-color: #f3f3f3;
 }
 .slider__img-wrap {
   position: relative;
   width: 44%;
   float: left;
 }
+.slider__img {
+  width: 67%;
+}
+
 .slider__description {
   padding-left: 50px;
   float: left;
@@ -279,6 +288,31 @@ body {
   font-size: em(24px);
   margin-bottom: 33px;
 }
+.slider__logo {
+	position: absolute;
+	bottom: 0;
+	right: 37px;
+}
+// owlcarousel
+.slider {
+  .owl-pagination {
+    text-align: center;
+    padding: 10px 0;
+  }
+  .owl-page {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #eeeeee;
+    @include border-top-radius(50%);
+    @include border-bottom-radius(50%);
+    margin-right: 10px;
+  }
+  .active {
+    background-color: #7bac42;
+  }
+}
+// end owlcarousel
 
 
 //.header__slider end
