@@ -255,5 +255,31 @@ body {
   }
 }
 //.header__main-menu end
+//.header__slider begin
+.slider__item {
+  padding-top: 60px;
+}
+.slider__img-wrap {
+  position: relative;
+  width: 44%;
+  float: left;
+}
+.slider__description {
+  padding-left: 50px;
+  float: left;
+  width: 56%;
+}
+.slider__h1 {
+  font-family: $light;
+  font-size: em(48px);
+  margin-bottom: 20px;
+}
+.slider__p {
+  font-family: $light;
+  font-size: em(24px);
+  margin-bottom: 33px;
+}
 
+
+//.header__slider end
 @import "partials/media.scss";
