@@ -313,7 +313,23 @@ body {
   }
 }
 // end owlcarousel
-
+//.content begin
+  // slider 1 begin
+  .goods__slider {
+    text-align: center;
+  }
+  .item {
+    width: 240px;
+    height: 300px;
+    background-color: blue;
+    margin-right: 40px;
+    display: inline-block;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  //slider 1 end
+//.content end
 
 //.header__slider end
 @import "partials/media.scss";

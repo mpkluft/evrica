@@ -42,10 +42,15 @@ $(function(){
       singleItem: true,
   }); 
 
-  $(".owl-carousel").owlCarousel({
+  $(".slider").owlCarousel({
     singleItem: true,
     autoPlay: 40000,
     items: 1
+  });
+
+  $(".goods__slider").owlCarousel({
+    autoPlay: 5000,
+    items: 4
   });
 
 });
