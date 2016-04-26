@@ -22,7 +22,6 @@ git push -u origin master
 git remote rm origin
 git reset --hard HEAD~1
 git log
-git push -f origin master
 
 >>> 
 circle - border-radius: 50%

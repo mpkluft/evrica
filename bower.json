@@ -9,7 +9,8 @@
     "font-awesome": "fontawesome#^4.5.0",
     "reset.scss": "^1.0.0",
     "sass-burger": "^1.3.0",
-    "animate.css": "animation.css#^3.5.1"
+    "animate.css": "animation.css#^3.5.1",
+    "matchHeight": "jquery-match-height#^0.7.0"
   },
   "overrides": {
     "bootstrap-sass": {

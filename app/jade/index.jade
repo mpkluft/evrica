@@ -117,29 +117,33 @@ head
           .col-xs-12
             section.goods.popular
               h3.goods__header Популярные товары
-              .goods__slider.owl-carousel
-                .goods__item
-                  img.goods__img(src="images/popular-goods/popular-slide1.jpg", alt="")
-                  a.goods__name [WS-C2960X-48FPS-L] Комvутатор 48 x GE RJ-45, 4 x SFP. LAN Base
-                  p.goods__description Блок питания Cisco - 6000 Вт Fc Power Supply Catalyst 6500...
-                  .goods__order
-                    span.goods__price 152 431 Р.
-                    span.goods__quanity 1
-                    button.button.button_goods Купить
+              .goods__slider-wrap
+                .goods__slider.owl-carousel
+                  +goods__items(
+                  "images/popular-goods/popular-slide1.jpg",
+                  "[WS-C2960S-24TD-L] Коммутатор Catalyst Catalyst 296S24 GigE, 2 x 10G SFP+ LAN BASE", 
+                  "Блок питания Cisco - 6000 Вт Fc Power Supply Catalyst 6500...", 
+                  "152 431 Р.", 
+                  "1")
+                  +goods__items(
+                  "images/popular-goods/popular-slide2.jpg",
+                  "[AIR-CT2504-25-K9] Wi-Fi rонтроллер Cisco", 
+                  "2504 Беспроводной контроллер + 25 лицензий доступа...", 
+                  "229 799 Р.", 
+                  "1")
+                  +goods__items(
+                  "images/popular-goods/popular-slide3.jpg",
+                  "[WS-CAS-6000W] CISCO источник питания для коммутатора", 
+                  "Блок питания Cisco - 6000 Вт Ac Power Supply для Catalyst 6500...", 
+                  "90 158 Р.", 
+                  "1")
+                  +goods__items(
+                  "images/popular-goods/popular-slide4.jpg",
+                  "[C3KX-NM-10G] Модуль Cisco C3KX-NM-10G 2 порта 10G (SFP+), для коммутаторов Cisco 3750X", 
+                  "Встраиваемые модули", 
+                  "147 378 Р.", 
+                  "1")
 
-                .item 1
-                .item 1
-                .item 1
-
-
-
-
-
-
-
-
-
-          
     
     //
       [if lt IE 10]>
@@ -164,6 +168,7 @@ head
     // build:js scripts/plugins.js
     script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/modal.js')
     script(src='/bower_components/owlcarousel/owl-carousel/owl.carousel.js')
+    script(src='/bower_components/matchHeight/dist/jquery.matchHeight.js')
     script(src='/bower_components/lightbox2/dist/js/lightbox.js')
     // endbuild
     // build:js scripts/main.js

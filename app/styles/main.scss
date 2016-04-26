@@ -30,11 +30,12 @@ body {
 .norelative {
 	position: static;
 }
-
-//Header
-.header {
-
+.clear {
+  height: 1px;
+  width: 100%;
+  clear: both;
 }
+//Header
 .heder__top-line {
 	background-color: #59595b;
 	position: relative;
@@ -315,21 +316,42 @@ body {
 // end owlcarousel
 //.content begin
   // slider 1 begin
-  .goods__slider {
-    text-align: center;
+  .goods {
+    margin-bottom: 5px;
   }
-  .item {
-    width: 240px;
-    height: 300px;
-    background-color: blue;
-    margin-right: 40px;
-    display: inline-block;
-    &:last-child {
-      margin-right: 0;
+  .goods__slider-wrap {
+    position: relative;
+    border: 1px solid #eeeeee;
+
+  }
+  .goods__slider {
+    width: 96%;
+    margin: 0 auto;
+    &:before {
+      content: "";
+      width: 2%;
+      height: 100%;
+      background: #eee  url(../images/icon/lamp.png) no-repeat;
+      position: absolute;
+      left: -2.1%;
+    }
+    &:after {
+      content: "";
+      width: 2%;
+      height: 100%;
+      background-color: #eee;
+      position: absolute;
+      top: 0;
+      right: -2.1%;
     }
   }
   .goods__item {
     width: 100%;
+    padding: 0 20px;
+    border-right: 1px solid #eeeeee;
+  }
+  .goods__img-wrap {
+    min-height: 150px;
   }
   .goods__img {
     display: block;
@@ -339,7 +361,7 @@ body {
   .goods__name {
     display: block;
     font-family: $regular;
-    font-size: em(17px);
+    font-size: em(20px);
     color: #20a0cb;
     text-align: left;
     margin-bottom: 17px;
@@ -355,24 +377,31 @@ body {
   font-size: em(15px);
 }
 .goods__order {
-  width: 100%;
   padding: 15px 0;
+  bottom: 0;
+  left: 25px;
 }
 .goods__price {
-  font-size: em(25px);
+  font-size: em(20px);
   font-family: $regular;
-  padding: 10px 0;
+  padding: 12.5px 0;
 }
 .goods__quanity{
-  font-size: em(25px);
+  font-size: em(20px);
   font-family: $regular;
-  padding: 10px 0 10px 30px;
+  padding: 12.5px 17px;
+  background-color: #f3f3f3;
+  margin-right: 7px;
+  @include border-top-radius(3px);
+  @include border-right-radius(3px);
+  @include border-bottom-radius(3px);
 }
 
-.goods__quanity,
+
 .goods__price {
   float: left;
 }
+.goods__quanity,
 .button_goods {
   float: right;
 }

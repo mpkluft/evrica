@@ -30,27 +30,31 @@ $(function(){
   });
   // При ресайзе закрывать все меню
   $(window).resize(function(){
-      $(".burger").removeClass("is-active");
+      $('.burger').removeClass('is-active');
       $('.autorization__ul').css('display', '');
       $('.top-nav__ul').css('display', '');
   })
   // слайдер 
-  $(".slider2").owlCarousel({
+  $('.slider2').owlCarousel({
       items: 1,
       
       lazyLoad: true,
       singleItem: true,
   }); 
 
-  $(".slider").owlCarousel({
+  $('.slider').owlCarousel({
     singleItem: true,
     autoPlay: 40000,
     items: 1
   });
 
-  $(".goods__slider").owlCarousel({
-    autoPlay: 5000,
+  $('.goods__slider').owlCarousel({
+    autoPlay: 10000,
     items: 4
   });
 
+  $('.goods__item').matchHeight();
+  $('.goods__img-wrap').matchHeight();
+  $('.goods__description').matchHeight();
+  $('.goods__name').matchHeight();
 });
