@@ -328,7 +328,56 @@ body {
       margin-right: 0;
     }
   }
-  //slider 1 end
+  .goods__item {
+    width: 100%;
+  }
+  .goods__img {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 0;
+  }
+  .goods__name {
+    display: block;
+    font-family: $regular;
+    font-size: em(17px);
+    color: #20a0cb;
+    text-align: left;
+    margin-bottom: 17px;
+    &:hover {
+      cursor: pointer;
+      color: #7bac42;
+    }
+  }
+.goods__description {
+  display: block;
+  text-align: left;
+  font-family: $regular;
+  font-size: em(15px);
+}
+.goods__order {
+  width: 100%;
+  padding: 15px 0;
+}
+.goods__price {
+  font-size: em(25px);
+  font-family: $regular;
+  padding: 10px 0;
+}
+.goods__quanity{
+  font-size: em(25px);
+  font-family: $regular;
+  padding: 10px 0 10px 30px;
+}
+
+.goods__quanity,
+.goods__price {
+  float: left;
+}
+.button_goods {
+  float: right;
+}
+
+//slider 1 end
 //.content end
 
 //.header__slider end
