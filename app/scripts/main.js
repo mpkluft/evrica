@@ -37,7 +37,6 @@ $(function(){
   // слайдер 
   $('.slider2').owlCarousel({
       items: 1,
-      
       lazyLoad: true,
       singleItem: true,
   }); 
@@ -53,8 +52,24 @@ $(function(){
     items: 4
   });
 
+
+  $('.popular').add('div').addClass('hi');
+  console.log($('.popular .hi').length)
+
+  $('.goods__slider:before').click(function() {
+    console.log($('.goods__slider:before'));
+    owl.trigger('next.owl.carousel');
+  })
+  // Go to the previous item
+
+  $('.goods__slider:after').click(function() {
+      // With optional speed parameter
+      owl.trigger('prev.owl.carousel');
+  })
+
   $('.goods__item').matchHeight();
   $('.goods__img-wrap').matchHeight();
   $('.goods__description').matchHeight();
   $('.goods__name').matchHeight();
+
 });
