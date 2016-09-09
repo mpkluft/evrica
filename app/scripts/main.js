@@ -67,6 +67,13 @@ $(function(){
       owl.trigger('prev.owl.carousel');
   })
 
+  $('.clients__slider').owlCarousel({
+    autoPlay: 10000,
+    items: 5
+  });
+
+  
+
   $('.goods__item').matchHeight();
   $('.goods__img-wrap').matchHeight();
   $('.goods__description').matchHeight();

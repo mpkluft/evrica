@@ -132,6 +132,7 @@ body {
 }
 .logo {
 	padding: 15px 0;
+  width: 100%;
 }
   // phone begin
 .phone {
@@ -358,22 +359,23 @@ body {
 .goods__slider {
   width: 96%;
   margin: 0 auto;
-  //&:before {
-  //  content: "";
-  //  width: 2%;
-  //  height: 100%;
-  //  background: #eee  url(../images/icon/lamp.png) no-repeat center center;
- //  cursor: pointer;
- //  position: absolute;
-  //  left: -2.1%;
-  //}
-  &:after {
+  &:before {
     content: "";
-    width: 2%;
+    width: 24px;
     height: 100%;
     background-color: #eee;
-    background: #eee  url(../images/icon/lamp.png) no-repeat center center;
-    cursor: pointer;
+    //background: #eee  url(../images/icon/lamp.png) no-repeat center center;
+    //cursor: pointer;
+    position: absolute;
+    left: -2.1%;
+  }
+  &:after {
+    content: "";
+    width: 24px;
+    height: 100%;
+    background-color: #eee;
+    //background: #eee  url(../images/icon/lamp.png) no-repeat center center;
+    //cursor: pointer;
     position: absolute;
     top: 0;
     right: -2.1%;
@@ -441,7 +443,109 @@ body {
 }
 
 //slider 1 end
-//.content end
+
+// slider clients begins
+.clients__slider {
+  width: 85%;
+  margin: 0 auto;
+}
+
+.clients__item {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+
+//slider clients ends
+
+// footer begins
+.footer-menu {
+  background-color: #eeeeee;
+  padding: 40px 0 20px 0;
+  margin-top: 90px;
+}
+
+.footer {
+  position: relative;
+}
+
+.logo_footer {
+  width: 80%;
+}
+
+.footer-menu__li {
+  font-family: $regular;
+  padding-bottom: 7px;
+  color: #59595b;
+}
+.footer-menu__li_name {
+  padding-bottom: 18px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.footer-menu__a {
+  color: #96d2e6;
+  cursor: pointer;
+  &:hover {
+    color: #96d2e6;
+    text-decoration: none;
+  }
+}
+
+.phone-footer,
+.email-footer {
+  position: relative;
+  font-family: $regular;
+}
+.phone-footer__img,
+.email-footer__img {
+  position: absolute;
+  left: -50px;
+}
+.phone-footer__name,
+.email-footer__name {
+  display: block;
+  color: $grey;
+  font-size: em(15px);
+  padding: 7px 0;
+}
+.phone-footer__number,
+.email-footer__email  {
+  color: $black;
+  font-size: em(20px);
+}
+
+.footer-under {
+  padding: 24px 0;
+}
+
+.footer-under__copyright,
+.footer-under__dev  {
+  display: block;
+  text-align: center;
+  font-family: $regular;
+  font-size: em(15px);
+  color: #adadad;
+  padding: 10px 0;
+}
+
+.footer-under__wrap {
+  padding: relative;
+}
+.footer-under__img {
+  position: absolute;
+  top: 3px;
+}
+.footer-under__img-wrap {
+  text-align: center;
+  overflow: hidden;
+}
+.footer-under__dev {
+  padding-left: 50px;
+}
+
+// footer end
 
 //.header__slider end
 @import "partials/media.scss";

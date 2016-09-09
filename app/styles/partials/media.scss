@@ -35,6 +35,26 @@
     bottom: 0;
     right: 37px;
   }
+  .button_goods{
+    padding: 14px 10px;
+  }
+  .goods__price {
+    padding: 9px 0;
+  }
+  .goods__quanity {
+    padding: 9px 10px;
+  }
+  .email-footer {
+    padding-left: 30px;
+  }
+  .email-footer__img {
+    position: absolute;
+    left: -20px;
+  }
+  .footer-under__img-wrap {
+  padding-top: 24px;
+}
+
 }
 
 /* Medium Devices, Desktops */
@@ -126,6 +146,24 @@
     right: 20px;
     width: 70px;
   }
+  .phone-footer,
+  .email-footer {
+    padding-left: 80px;
+  }
+  .phone-footer__img,
+  .email-footer__img {
+    left: 0;
+  }
+  .phone-footer__name,
+  .email-footer__name {
+    font-size: em(15px);
+    padding: 7px 0;
+  }
+  .phone-footer__number,
+  .email-footer__email  {
+    color: $black;
+    font-size: em(20px);
+  }
 
 }
 /* Small Devices, Tablets */
@@ -178,6 +216,9 @@
   .slider__logo {
     display: none;
   }
+  .logo_footer {
+    display: none;
+  }
 
 }
 
@@ -188,6 +229,25 @@
   .header__slider {
     display: none;
   }
+  .phone-footer,
+  .email-footer {
+    margin: 20px;
+  }
+  .footer-menu {
+    padding: 20px 0 0 0;
+    margin-top: 30px;
+  }
+
+  .footer-under__copyright,
+  .footer-under__dev  {
+    font-size: em(11px);
+    padding: 0;
+  }
+  .footer-under__img {
+    top: -9px;
+    left: -3px;
+  }
+
 }
 
 /* Custom, iPhone Retina */
